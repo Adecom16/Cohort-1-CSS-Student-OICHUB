@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Discount Calculator</title>
+  <title>Tip Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
     }
-    input {
+    input, select {
       margin: 10px 0;
       padding: 10px;
       width: 200px;
@@ -26,23 +26,28 @@
 </head>
 <body>
 
-  <h1>Discount Calculator</h1>
+  <h1>Tip Calculator</h1>
   
-  <label for="price">Original Price:</label>
-  <input type="number" id="price" placeholder="Enter original price">
+  <label for="bill">Total Bill Amount ($):</label>
+  <input type="number" id="bill" placeholder="Enter total bill amount">
 
   <br>
 
-  <label for="discount">Discount Percentage (%):</label>
-  <input type="number" id="discount" placeholder="Enter discount %">
+  <label for="tip">Tip Percentage (%):</label>
+  <select id="tip">
+    <option value="10">10%</option>
+    <option value="15">15%</option>
+    <option value="20">20%</option>
+    <option value="25">25%</option>
+  </select>
 
   <br>
 
-  <button onclick="calculateDiscount()">Calculate Discount</button>
+  <button onclick="calculateTip()">Calculate Tip</button>
 
   <div class="result" id="result"></div>
 
-  <script src="script.js"></script>
-  
+  <script src="tip.js"></script>
+
 </body>
 </html>
